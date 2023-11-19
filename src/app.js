@@ -2,6 +2,7 @@ import { join } from 'path';
 import appRootPath from 'app-root-path';
 
 import loadCSV from './utils/csv-loader.js';
+import LogisticRegression from './models/logistic-regression.js';
 
 // Load the CSV file path
 const csvFilePath = join(appRootPath.path, 'data', 'vintage_cars_data.csv');
@@ -23,7 +24,17 @@ const csvLoadingOptions = {
 };
 
 // Load the CSV data using the provided options
-const { labels } = loadCSV(csvFilePath, csvLoadingOptions);
+const { features, labels, testFeatures, testLabels } = loadCSV(csvFilePath, csvLoadingOptions);
 
-// Log the loaded labels for verification
-console.log(labels);
+const regression = new LogisticRegression(features, labels, {
+  learningRate: 0.5,
+  iterations: 100,
+  batchSize: 50,
+  decisionBoundary: 0.5,
+});
+
+regression.train();
+
+const modelAccuracy = regression.test(testFeatures, testLabels);
+
+console.log(`\n\n[+] Model Accuracy: ${modelAccuracy}%\n\n`);
