@@ -1,0 +1,75 @@
+{
+  "name": "smogemissionclassifier",
+  "version": "1.0.0",
+  "description": "A logistic regression-based model 📈 predicting vehicle pass/fail for smog emissions checks 🏎️ 💨. Analyzes weight, horsepower, & displacement for eco-friendly 🌿 driving assessment.",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmaaelTyrneaMitore/SmogEmissionsClassifier.git"
+  },
+  "keywords": [
+    "smog",
+    "emissions",
+    "classifier",
+    "machine-learning",
+    "tensorflow.js",
+    "node.js",
+    "vehicle",
+    "emissions",
+    "environmental",
+    "analysis",
+    "eco-friendly",
+    "driving",
+    "logistic",
+    "regression",
+    "gradient",
+    "descent",
+    "data",
+    "analysis",
+    "prediction",
+    "neural",
+    "networks",
+    "npm",
+    "package",
+    "environmental",
+    "impact",
+    "eco-assessment",
+    "vehicle",
+    "classification",
+    "emission",
+    "prediction",
+    "JavaScript",
+    "AI",
+    "model",
+    "development",
+    "sustainable",
+    "transportation",
+    "environmental",
+    "awareness",
+    "data",
+    "preprocessing",
+    "eco-conscious",
+    "technology",
+    "data",
+    "science",
+    "open-source",
+    "project"
+  ],
+  "author": "Shashank Singh",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/AmaaelTyrneaMitore/SmogEmissionsClassifier/issues"
+  },
+  "homepage": "https://github.com/AmaaelTyrneaMitore/SmogEmissionsClassifier#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "shuffle-seed": "^1.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
