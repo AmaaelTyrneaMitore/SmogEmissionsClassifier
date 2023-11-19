@@ -144,7 +144,7 @@ export default class LogisticRegression {
     // Calculate cross-entropy cost
     const termOne = this.labels.transpose().matMul(predictions.log());
     const termTwo = this.labels.mul(-1).add(1).transpose().matMul(predictions.mul(-1).add(1).log());
-    const cost = termOne.add(termTwo).div(this.features.shape[0]).mul(-1).arraySync();
+    const cost = termOne.add(termTwo).div(this.features.shape[0]).mul(-1).arraySync()[0][0];
 
     // Store the cost in the history
     this.costHistory.unshift(cost);
